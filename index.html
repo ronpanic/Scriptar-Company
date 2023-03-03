@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/limbo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Scriptar - Company</title>
+  </head>
+  <body>
+    <button id="menu-button">
+      <div></div>
+      <div></div>
+      <div></div>
+    </button>
+
+    <div id="menu" class="menu">
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Discord</a></li>
+      </ul>
+    </div>
+
+    <div id="background" class="background"></div>
+
+    <div class="box">
+      <div class="title-container container">
+        <div class="title" id="title">
+          <h1 class="trs1">Scriptar</h1>
+        </div>
+        <div class="title-2">
+          <p class="trs">
+            A creative digital studio specializing in handmade websites, applications, art, branding, and motion graphics.
+          </p>
+          <div class="down-arrow">
+            <ul>
+              <li><a href="#text-introduce"><img src="images/arrow.png" alt="arrow"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="moon">
+        <img src="images/cluna.png" alt="Mooon" />
+      </div>
+      <div class="earth">
+        <img src="images/tierra.png" alt="earth">
+      </div>
+    </div>
+    <div>
+      <img src="images/strella1.png" alt="stairs">
+    </div>
+
+    <div class="down-arrow1">
+      <ul>
+        <li><a href="#menu-button"><img src="images/uparrow.png" alt="arrow"></a></li>
+      </ul>
+    </div>
+
+    <main class="text-box container" id="text-introduce">
+      <div class="header">
+        <p>
+          Scripta is a company dedicated to the development of customized software and technological solutions for companies in various sectors. With a highly trained and specialized team in various technologies, Scripta offers personalized and high-quality programming services to meet the specific needs of each client.
+        </p>
+      </div>
+      <div class="header1">
+        <p>
+          As the founder of Scriptar, a creative digital studio, our focus is on creating innovative and creative digital content for our clients. Our projects typically involve graphic design, website development, mobile app creation, video production, animations, and other multimedia content.
+        </p>
+      </div>
+    </main>
+
+    <div class="wrapper">
+      <img src="#" alt="">
+      <div class="content">
+        <header>Cookies Consent</header>
+        <p>This website use cookies to ensure you get the best experience on our website.</p>
+        <div class="buttons">
+          <button class="item1">I understand</button>
+          <a href="#" class="item2">Learn more</a>
+        </div>
+      </div>
+    </div>
+
+        <script>
+          const cookieBox = document.querySelector(".wrapper"),
+          acceptBtn = cookieBox.querySelector("button");
+          acceptBtn.onclick = ()=>{
+            //setting cookie for 1 month, after one month it'll be expired automatically
+            document.cookie = "CookieBy=CodingNepal; max-age="+60*60*24*30;
+            if(document.cookie){ //if cookie is set
+              cookieBox.classList.add("hide"); //hide cookie box
+            }else{ //if cookie not set then alert an error
+              alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
+            }
+          }
+          let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal"); //checking our cookie
+          //if cookie is set then hide the cookie box else show it
+          checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+        </script>
+        <script src="Java.js"></script>
+    </body>
+</html>

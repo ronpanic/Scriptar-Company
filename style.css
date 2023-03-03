@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&family=Kanit:ital,wght@1,600&family=Open+Sans:wght@500&family=Roboto+Condensed:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Genos:wght@300&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+
+body {
+  font-family: "Kanit", sans-serif;
+  user-select: none;
+  overflow: auto;
+  background: radial-gradient(circle at center, transparent 0%, #181B23 100%);
+  background-image: url('images/strella1.png');
+  background-repeat: repeat;
+  background-color: #1d202a;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper{
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  max-width: 365px;
+  background: #fff;
+  padding: 25px 25px 30px 25px;
+  border-radius: 15px;
+  box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.wrapper.hide{
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+
+::selection{
+  color: #fff;
+  background: #FCBA7F;
+}
+
+.wrapper img{
+  max-width: 90px;
+}
+
+.content header{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.content{
+  margin-top: 10px;
+  align-items: center;
+}
+
+.content p{
+  color: #858585;
+  margin: 5px 0 20px 0;
+}
+
+.content .buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button{
+  padding: 3px 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  background: #9BA7BF;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttons button:hover{
+  transform: scale(0.97);
+}
+
+
+.buttons a{
+  color: #9BA7BF;
+}
+
+
+button {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 15px;
+  width: 2rem;
+  height: 3rem;
+  border: 0;
+  background: transparent;
+  gap: .50rem;
+  cursor: pointer;
+}
+
+button > div {
+  background: #9BA7BF;
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+  transition: all .5s;
+  transform-origin: left;
+}
+
+button > div + div {
+  margin-top: 8px;
+}
+
+
+.menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-bottom: 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9998;
+}
+
+button:hover div:first-child {
+  transform: rotate(45deg);
+}
+
+button:hover div:nth-child(2) {
+  opacity: 0;
+}
+
+button:hover div:last-child {
+  transform: rotate(-45deg);
+}
+
+
+.navbar {
+  overflow: hidden;
+  padding-top: 40px;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  text-align: center;
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+ul.navbar-right {
+  float: right;
+}
+
+ul.navbar-right li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+ul.navbar-right li:first-child {
+  margin-left: 0;
+}
+
+.text-box {
+  margin-top: 35rem;
+}
+
+.header {
+  font-family: "Dosis", sans-serif;
+  color: #6d748b;
+  max-width: 25rem;
+  text-align: left;
+  position: relative;
+  margin-left: 70%;
+  margin-top: 20%;
+  top: -20rem;
+}
+
+
+.header1 {
+  font-family: "Dosis", sans-serif;
+  color: #6d748b;
+  max-width: 20rem;
+  margin-top: -60%; 
+  text-align: left;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 200px;
+  margin-bottom: 50px;
+  font-size: 4rem;
+  text-shadow: 6px 6px 5px #555;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  font-family: "Genos", sans-serif;
+  animation: fade 4s linear infinite;
+  color: #bcc1cd;
+  text-align: center;
+  display: inline-block;
+  border-bottom: 1px solid #373841;
+  width: 100%;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.title-2 {
+  font-family: "Dosis", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  color: #6d748b;
+  margin-top: -30px;
+  width: 600px;
+  overflow-wrap: break-word;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.moon img {
+  position: absolute;
+  bottom: 5.8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+}
+
+
+@media (max-width: 768px) {
+  .moon {
+    bottom: 10px;
+  }
+}
+
+.bar {
+  position: relative;
+  display: inline-block;
+}
+
+.bar img {
+  margin-top: 10px;
+  margin-left: 10px;
+  filter: grayscale(100%) invert(100%) sepia(100%) hue-rotate(240deg) brightness(90%) saturate(80%);
+}
+
+.bar:hover img {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.earth {
+  position: relative;
+}
+
+.earth img {
+  position: absolute;
+  right: 0;
+  width: 13%;
+  margin-right: 8rem;
+  margin-top: -25rem;
+}
+
+
+
+.down-arrow {
+  padding-left: 17.3rem;
+  padding-top: 2rem;
+  filter: invert(100%) hue-rotate(120deg);
+  position: relative;
+  z-index: 1;
+}
+
+.down-arrow1 {
+  position: absolute;
+  bottom: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: invert(100%) hue-rotate(120deg);
+}
+
+.trs {
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.trs.show {
+  opacity: 1;
+}
+
+.trs1 {
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.trs1.show {
+  opacity: 1;
+}
+
